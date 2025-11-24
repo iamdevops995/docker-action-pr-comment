@@ -1,0 +1,12 @@
+# action.yml
+name: 'Docker action demo'
+description: 'Greet someone from docker action'
+inputs:
+  github_token:  # id of input
+    description: 'provide github_token'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.github_token }}

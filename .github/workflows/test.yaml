@@ -1,0 +1,18 @@
+on: 
+  pull_request: 
+    types: opened
+
+jobs:
+  custom_docker_job:
+    runs-on: ubuntu-latest
+    permissions: 
+      issues: write
+      pull-requests: write
+    steps:
+      - name:  checkout repo
+        uses: actions/checkout@v6
+
+      - name: Docker custom actions
+        uses: ./
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
