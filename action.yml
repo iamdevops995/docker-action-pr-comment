@@ -1,5 +1,5 @@
 # action.yml
-name: 'Docker action demo'
+name: 'iamdevops995-docker-action'
 description: 'Greet someone from docker action'
 inputs:
   github_token:  # id of input
@@ -10,3 +10,6 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.github_token }}
+  branding:
+    icon: 'award'
+    color: 'green'
