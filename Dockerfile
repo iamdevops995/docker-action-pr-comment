@@ -1,6 +1,6 @@
 # Container image that runs your code
 FROM alpine:3.10
-RUN sudo apk update  && sudo apk add --no-cache curl jq 
+RUN apk update  && apk add --no-cache curl jq 
 
 COPY entrypoint.sh /entrypoint.sh
 
