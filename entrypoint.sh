@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 GITHUB_TOKEN=$1
 #
 pr_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
